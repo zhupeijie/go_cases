@@ -1,0 +1,23 @@
+# The operating system files
+.DS_Store
+*/.DS_Store
+
+# Editor directories and files
+.idea
+*/.idea
+.vscode
+*/.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Project directories and files
+/bin
+/logs
+*.log
+*.log.*
+
+
+# debug
+__debug_bin
