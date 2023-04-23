@@ -22,3 +22,11 @@ func TestChineseNumStringToArabicNum(t *testing.T) {
 		}
 	}
 }
+
+func TestGenerateUUID(t *testing.T) {
+	out := GenerateUUID()
+	if len(out) != 36 {
+		t.Errorf("GenerateUUID() != 36, out=%d", len(out))
+	}
+	t.Logf("GenerateUUID() = %s", out)
+}

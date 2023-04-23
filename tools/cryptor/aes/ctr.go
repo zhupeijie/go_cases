@@ -4,8 +4,7 @@ import (
 	"crypto/aes"
 	"crypto/cipher"
 	"encoding/base64"
-
-	"git.100tal.com/wangxiao_jiaoyan_go/library/utils/cryptor"
+	"go_cases/tools/cryptor"
 )
 
 type ctr struct {
