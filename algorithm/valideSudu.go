@@ -23,7 +23,6 @@ func isValidSudoku(board [][]byte) bool {
 				} else {
 					box[i/3*3+j/3][num] = 1
 				}
-
 			}
 		}
 
