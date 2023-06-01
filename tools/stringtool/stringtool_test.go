@@ -2,7 +2,7 @@ package stringtool
 
 import "testing"
 
-func TestChineseNumStringToArabicNum(t *testing.T) {
+func Test_ChineseNumStringToArabicNum(t *testing.T) {
 	testConfig := []struct {
 		input    string
 		expected int64

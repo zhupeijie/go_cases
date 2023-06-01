@@ -15,10 +15,10 @@ func TJob() *cron.Cron {
 		panic("here is err" + err.Error())
 	}
 	c.Start()
+
 	return c
 }
 
-
-func fmtF(){
+func fmtF() {
 	fmt.Println("here is test job ", time.Now().Unix())
 }

@@ -11,6 +11,7 @@ import (
 	uuid2 "github.com/google/uuid"
 
 	job_demo "demo/job-demo"
+	"demo/timer"
 )
 
 type ExtData struct {
@@ -26,11 +27,18 @@ const (
 
 func main() {
 
-	now := time.Now().UnixNano() / 1e6
-	fmt.Println("---", now)
-	fmt.Println(1e6)
+	ticker := timer.NewTicker(1, func() {
+		fmt.Println("here is test job ", time.Now().Unix())
+	})
+
+	defer ticker.Stop()
+	ticker.Tick()
+	// now := time.Now().UnixNano() / 1e6
+	// fmt.Println("---", now)
+	// fmt.Println(1e6)
 	// 1663205130400
 	// 1663121601000
+	// return
 	return
 
 	// c := job_demo.TJob()
@@ -58,7 +66,7 @@ func uuidT() {
 	// times := 1
 	// for i := 0; i < times; i++ {
 	// 	uuid.NewV4().String()
-	//go mod
+	// go mod
 	// }
 	// t2 := time.Now()
 	fmt.Println(" == ", strings.Replace(uuid2.New().String(), "-", "", -1))
