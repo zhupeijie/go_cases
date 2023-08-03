@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
+	"go_cases/hotup/srv"
 	"net"
 	"net/http"
 	"os"
@@ -13,8 +14,6 @@ import (
 
 	"github.com/facebookgo/grace/gracehttp"
 	"github.com/gin-gonic/gin"
-
-	"hotup/srv"
 )
 
 // 热更新实现s
@@ -25,7 +24,6 @@ func main() {
 
 func HotByShutdown() {
 	e := gin.Default()
-
 
 	// 注册router
 	router(e)

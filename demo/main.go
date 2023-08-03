@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"go_cases/demo/timer"
 	"net/http"
 	"strings"
 	"time"
@@ -10,10 +11,11 @@ import (
 	"github.com/gin-gonic/gin"
 	uuid2 "github.com/google/uuid"
 
-	job_demo "demo/job-demo"
-	"demo/timer"
+	job_demo "go_cases/demo/job-demo"
+	// "demo/timer"
 )
 
+// ExtData 扩展数据
 type ExtData struct {
 	TeaID int64 `json:"tea_id"`
 }

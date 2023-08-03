@@ -33,7 +33,7 @@ func main() {
 	//fmt.Println(b.Stu[0].Name)
 	//str,_:= json.Marshal(b)
 	//fmt.Println(string(str))
-   //"stu":[{"name":"zhupejie"},{"name":"baicai"}]}
+	//"stu":[{"name":"zhupejie"},{"name":"baicai"}]}
 
 	//t := T{23, "skidoo"}
 	//s := reflect.ValueOf(&t).Elem()
@@ -63,10 +63,9 @@ func main() {
 	//fmt.Println("t is now", t)
 }
 
-func demoT1()(b *A)  {
-	a  := `{"name":"zhupejie"}`
-	err := json.Unmarshal([]byte(a),&b)
+func demoT1() (b *A) {
+	a := `{"name":"zhupejie"}`
+	err := json.Unmarshal([]byte(a), &b)
 	fmt.Println(err)
 	return
 }
-
